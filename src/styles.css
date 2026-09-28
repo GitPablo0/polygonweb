@@ -1,0 +1,103 @@
+@import "tailwindcss" source("../");
+
+@theme {
+  /* Backgrounds */
+  --color-mist: #f3f5f8;
+  --color-mist-alt: #e9edf1;
+
+  /* Elements / cards */
+  --color-cloud: #d8e0e7;
+
+  /* Accents & gradients */
+  --color-haze-100: #cad5df;
+  --color-haze-300: #9aafc2;
+  --color-haze-400: #8fa7b8;
+  --color-haze-500: #7d9ab3;
+
+  /* Text */
+  --color-ink: #1c2733;
+  --color-ink-soft: #445468;
+
+  --font-display: "Space Grotesk", "Segoe UI", sans-serif;
+  --font-sans: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+
+  --shadow-soft: 0 1px 2px rgba(28, 39, 51, 0.04), 0 12px 32px -12px rgba(125, 154, 179, 0.35);
+  --shadow-lift: 0 2px 4px rgba(28, 39, 51, 0.05), 0 24px 48px -16px rgba(125, 154, 179, 0.45);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    margin: 0;
+    background-color: var(--color-mist);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  code {
+    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;
+  }
+}
+
+@layer components {
+  .glass-panel {
+    background-color: color-mix(in srgb, white 55%, var(--color-cloud) 45%);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid color-mix(in srgb, white 60%, var(--color-haze-100) 40%);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .neu-surface {
+    background: linear-gradient(145deg, #f7f9fb, #e6ebf0);
+    box-shadow:
+      8px 8px 20px rgba(160, 179, 196, 0.35),
+      -8px -8px 20px rgba(255, 255, 255, 0.75);
+  }
+
+  .btn-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    transition:
+      transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+      background-color 0.35s ease;
+  }
+
+  .btn-pill-primary {
+    background-color: var(--color-ink);
+    color: var(--color-mist);
+    box-shadow: 0 10px 30px -10px rgba(28, 39, 51, 0.55);
+  }
+
+  .btn-pill-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 16px 36px -10px rgba(28, 39, 51, 0.6);
+  }
+
+  .btn-pill-ghost {
+    background-color: color-mix(in srgb, white 70%, var(--color-cloud) 30%);
+    color: var(--color-ink);
+    border: 1px solid color-mix(in srgb, white 40%, var(--color-haze-300) 60%);
+  }
+
+  .btn-pill-ghost:hover {
+    transform: translateY(-2px);
+    background-color: white;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
