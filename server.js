@@ -1,11 +1,8 @@
-console.log(">>> SERVER.JS DE POLYGONWEB SE ESTA EJECUTANDO <<<");
-
 import { spawn } from "node:child_process";
 
 const child = spawn(
-  "npx",
+  "./node_modules/.bin/srvx",
   [
-    "srvx",
     "serve",
     "--prod",
     "--entry",
@@ -14,8 +11,7 @@ const child = spawn(
     "../client"
   ],
   {
-    stdio: "inherit",
-    shell: true
+    stdio: "inherit"
   }
 );
 
