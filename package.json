@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
-    "start": "node dist/server/server.js"
+    "start": "srvx serve --prod --entry ./dist/server/server.js --static ../../dist/client"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.2.2",
@@ -16,6 +16,7 @@
     "lucide-react": "0.576.0",
     "react": "19.2.8",
     "react-dom": "19.2.8",
+    "srvx": "^1.0.5",
     "tailwindcss": "4.2.2",
     "three": "^0.186.1",
     "vite-tsconfig-paths": "6.1.1",
