@@ -1,25 +1,26 @@
 import { spawn } from "node:child_process";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const appRoot = path.dirname(fileURLToPath(import.meta.url));
+
+console.log(">>> INICIANDO POLYGONWEB <<<");
 
 const child = spawn(
-  "./node_modules/.bin/srvx",
-  [
-    "serve",
-    "--prod",
-    "--entry",
-    "./dist/server/server.js",
-    "--static",
-    "../client"
-  ],
+  "npm",
+  ["start"],
   {
-    stdio: "inherit"
+    cwd: appRoot,
+    stdio: "inherit",
+    shell: false
   }
 );
 
 child.on("error", (error) => {
-  console.error("ERROR AL INICIAR SRVX:", error);
+  console.error("ERROR AL EJECUTAR NPM:", error);
 });
 
-child.on("exit", (code) => {
-  console.log("SRVX TERMINÓ CON CÓDIGO:", code);
-  process.exit(code ?? 0);
+child.on("exit", (code, signal) => {
+  console.log("NPM TERMINÓ:", { code, signal });
+  process.exit(code ?? 1);
 });
