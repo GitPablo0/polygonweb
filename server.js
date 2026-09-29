@@ -1,26 +1,22 @@
-import { spawn } from "node:child_process";
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import { serve } from "srvx";
+import { staticMiddleware } from "srvx/static";
+import app from "./dist/server/server.js";
 
-const appRoot = path.dirname(fileURLToPath(import.meta.url));
+const port = Number(process.env.PORT) || 3000;
 
 console.log(">>> INICIANDO POLYGONWEB <<<");
+console.log("Puerto:", port);
 
-const child = spawn(
-  "npm",
-  ["start"],
-  {
-    cwd: appRoot,
-    stdio: "inherit",
-    shell: false
-  }
-);
-
-child.on("error", (error) => {
-  console.error("ERROR AL EJECUTAR NPM:", error);
+const server = serve({
+  port,
+  middleware: [
+    staticMiddleware({
+      dir: "./dist/client",
+    }),
+  ],
+  fetch: app.fetch,
 });
 
-child.on("exit", (code, signal) => {
-  console.log("NPM TERMINÓ:", { code, signal });
-  process.exit(code ?? 1);
-});
+await server.ready();
+
+console.log(">>> POLYGONWEB ESCUCHANDO EN:", server.url);
