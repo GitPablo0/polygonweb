@@ -3,10 +3,10 @@ import { Menu, X } from 'lucide-react'
 import { Logo } from './Logo'
 
 const NAV_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
-  { label: 'Contact', href: '#contact' },
+  { label: 'Inicio', href: '#home' },
+  { label: 'Servicios', href: '#services' },
+  { label: 'Portafolio', href: '#portfolio' },
+  { label: 'Contacto', href: '#contact' },
 ]
 
 export function Navbar() {
@@ -33,7 +33,7 @@ export function Navbar() {
 
         <div className="hidden md:block">
           <a href="#contact" className="btn-pill btn-pill-primary px-6 py-2.5 text-sm">
-            Get Started
+            Empezar
           </a>
         </div>
 

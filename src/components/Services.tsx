@@ -38,10 +38,10 @@ export function Services() {
       <div className="mx-auto max-w-6xl">
         <div className="mx-auto max-w-2xl text-center">
           <p className="font-display text-xs font-semibold uppercase tracking-[0.3em] text-haze-500">
-            What we do
+            Qué hacemos?
           </p>
           <h2 className="font-display mt-4 text-3xl font-semibold uppercase tracking-tight text-ink sm:text-4xl">
-            Services built around your product
+            Servicios contruídos alrededor de tu proyecto
           </h2>
         </div>
 

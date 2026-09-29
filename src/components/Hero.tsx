@@ -10,15 +10,15 @@ export function Hero() {
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 text-center sm:px-6 lg:px-10">
         <span className="glass-panel mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide text-ink-soft">
           <span className="h-1.5 w-1.5 rounded-full bg-haze-500" />
-          Available for new projects
+          Disponible para nuevos proyectos
         </span>
 
         <h1 className="font-display max-w-4xl text-balance text-[2.6rem] font-semibold uppercase leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl">
-          We build digital experiences
+            Tu idea, Tu Negocio, Tu Web
         </h1>
 
         <p className="mt-6 max-w-xl text-balance text-base text-ink-soft sm:text-lg">
-          Crafting cutting-edge web and mobile solutions.
+          Desarrollamos tu web, a tu medida y a tu presupuestp.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
@@ -26,14 +26,14 @@ export function Hero() {
             href="#portfolio"
             className="btn-pill btn-pill-primary px-8 py-3.5 text-sm sm:text-base"
           >
-            Explore Projects
+            Explorar Proyectos
             <ArrowRight className="h-4 w-4" />
           </a>
           <a
             href="#contact"
             className="btn-pill btn-pill-ghost px-8 py-3.5 text-sm sm:text-base"
           >
-            Contact Us
+            Contactarnos
           </a>
         </div>
 

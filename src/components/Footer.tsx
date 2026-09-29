@@ -3,15 +3,15 @@ import { GradientBackdrop } from './GradientBackdrop'
 import { Logo } from './Logo'
 
 const SOCIAL_LINKS = [
-  { label: 'LinkedIn', href: 'https://linkedin.com', icon: Linkedin },
-  { label: 'GitHub', href: 'https://github.com', icon: Github },
-  { label: 'Instagram', href: 'https://instagram.com', icon: Instagram },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/in/gitpablo', icon: Linkedin },
+  { label: 'GitHub', href: 'https://github.com/GitPablo0', icon: Github },
+  { label: 'Instagram', href: 'https://instagram.com/git.pablo', icon: Instagram },
 ]
 
 const FOOTER_LINKS = [
-  { label: 'Home', href: '#home' },
-  { label: 'Services', href: '#services' },
-  { label: 'Portfolio', href: '#portfolio' },
+  { label: 'Inicio', href: '#home' },
+  { label: 'Servicios', href: '#services' },
+  { label: 'Portafolio', href: '#portfolio' },
 ]
 
 export function Footer() {
@@ -24,20 +24,20 @@ export function Footer() {
       <div className="relative mx-auto max-w-6xl">
         <div className="glass-panel rounded-[2rem] px-8 py-14 text-center sm:px-16">
           <p className="font-display text-xs font-semibold uppercase tracking-[0.3em] text-haze-500">
-            Let’s talk
+            Hablemos
           </p>
           <h2 className="font-display mx-auto mt-4 max-w-2xl text-3xl font-semibold uppercase tracking-tight text-ink sm:text-4xl">
-            Ready to start your next project?
+            Listo para empezar tu siguiente proyecto?
           </h2>
           <p className="mx-auto mt-4 max-w-md text-sm text-ink-soft">
             Cuéntanos qué estás construyendo y te respondemos en menos de 24 horas.
           </p>
           <a
-            href="mailto:hello@polygonweb.studio"
+            href="mailto:gitpabloo@gmail.com"
             className="btn-pill btn-pill-primary mx-auto mt-8 w-fit px-8 py-3.5 text-sm"
           >
             <Mail className="h-4 w-4" />
-            hello@polygonweb.studio
+            gitpabloo@gmail.com
           </a>
         </div>
 
