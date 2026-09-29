@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "vite dev --port 3000",
     "build": "vite build",
-    "start": "srvx serve --prod --entry ./dist/server/server.js --static ../../dist/client"
+    "start": "srvx serve --prod --entry ./dist/server/server.js --static ../client"
   },
   "dependencies": {
     "@tailwindcss/vite": "4.2.2",
