@@ -17,6 +17,6 @@ const server = serve({
   fetch: app.fetch,
 });
 
-await server.ready();
-
-console.log(">>> POLYGONWEB ESCUCHANDO EN:", server.url);
+server.ready().then(() => {
+  console.log(">>> POLYGONWEB ESCUCHANDO EN:", server.url);
+});
