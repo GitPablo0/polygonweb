@@ -10,14 +10,14 @@ const PROJECTS: Array<Project> = [
   {
     image: '/img/portfolio-1.png',
     title: 'Cayo Perico',
-    category: 'E-commerce · Next.js',
+    category: 'SaaS · Landing',
     description: 'Club de Cultura Urbana, estudio de tatuaje, barbería y cafetería en un mismo lugar.',
     link: 'https://cayoperico.com.ar',
   },
   {
     image: '/img/portfolio-2.png',
     title: 'Malery',
-    category: 'E-commerce · Fintech',
+    category: 'E-commerce · Tienda Nube',
     description: 'Lencería diseñada y confeccionada con amor, dedicación y atención a los detalles.',
     link: 'https://malery.com.ar',
   },

@@ -9,7 +9,7 @@ export function Hero() {
 
       <div className="relative mx-auto flex max-w-6xl flex-col items-center px-4 text-center sm:px-6 lg:px-10">
         <span className="glass-panel mb-8 inline-flex items-center gap-2 rounded-full px-4 py-1.5 text-xs font-medium tracking-wide text-ink-soft">
-          <span className="h-1.5 w-1.5 rounded-full bg-haze-500" />
+          <span className="h-1.5 w-1.5 rounded-full bg-green-soft" />
           Disponible para nuevos proyectos
         </span>
 
@@ -18,7 +18,7 @@ export function Hero() {
         </h1>
 
         <p className="mt-6 max-w-xl text-balance text-base text-ink-soft sm:text-lg">
-          Desarrollamos tu web, a tu medida y a tu presupuestp.
+          Desarrollamos tu web, a tu medida y a tu presupuesto.
         </p>
 
         <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row">
@@ -47,16 +47,16 @@ export function Hero() {
             <div className="hidden h-10 w-px bg-white/60 sm:block" />
             <div className="grid flex-1 grid-cols-3 gap-4 text-left sm:gap-6">
               <div>
-                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">38</p>
-                <p className="text-xs text-ink-soft sm:text-sm">Products shipped</p>
+                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">1:1</p>
+                <p className="text-xs text-ink-soft sm:text-sm">Comunicación directa</p>
               </div>
               <div>
-                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">6.4y</p>
-                <p className="text-xs text-ink-soft sm:text-sm">In business</p>
+                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">100%</p>
+                <p className="text-xs text-ink-soft sm:text-sm">Código a medida</p>
               </div>
               <div>
-                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">94%</p>
-                <p className="text-xs text-ink-soft sm:text-sm">Repeat clients</p>
+                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">24/7</p>
+                <p className="text-xs text-ink-soft sm:text-sm">Soporte disponible</p>
               </div>
             </div>
           </div>

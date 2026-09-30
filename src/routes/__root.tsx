@@ -3,9 +3,9 @@ import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
 
 import '../styles.css'
 
-const siteName = 'PolygonWeb — Digital Experiences Studio'
+const siteName = 'Polygon Web — Desarrollo Web y Móvil Freelance'
 const siteDescription =
-  'PolygonWeb is a freelance web and mobile development studio crafting cutting-edge digital experiences.'
+  'Polygon Web es un estudio de desarrollo web y móvil freelance que ofrece soluciones personalizadas para empresas y emprendedores. Nos especializamos en crear sitios web, aplicaciones móviles y plataformas digitales innovadoras y funcionales.'
 
 export const Route = createRootRoute({
   head: () => ({

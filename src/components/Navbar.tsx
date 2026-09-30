@@ -66,7 +66,7 @@ export function Navbar() {
               onClick={() => setIsMenuOpen(false)}
               className="btn-pill btn-pill-primary mt-2 px-6 py-2.5 text-center text-sm"
             >
-              Get Started
+              Empezar
             </a>
           </nav>
         </div>

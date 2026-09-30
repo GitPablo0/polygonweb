@@ -20,7 +20,7 @@ const SERVICES: Array<Service> = [
     icon: PenTool,
     title: 'Diseño UI/UX',
     description:
-      'Wireframes, prototipos y sistemas de diseño que convierten interacciones complejas en flujos simples.',
+      'Diseños de interfaces que priorizan la interacción y la experiencia del usuario',
     tags: ['Figma', 'Prototipado', 'Sistemas'],
   },
   {

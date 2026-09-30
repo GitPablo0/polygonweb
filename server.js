@@ -8,15 +8,15 @@ console.log(">>> INICIANDO POLYGONWEB <<<");
 console.log("Puerto:", port);
 
 const server = serve({
-  port,
-  middleware: [
-    staticMiddleware({
-      dir: "./dist/client",
-    }),
-  ],
-  fetch: app.fetch,
+    port,
+    middleware: [
+        staticMiddleware({
+        dir: "./dist/client",
+        }),
+    ],
+    fetch: app.fetch,
 });
 
 server.ready().then(() => {
-  console.log(">>> POLYGONWEB ESCUCHANDO EN:", server.url);
+    console.log(">>> POLYGONWEB ESCUCHANDO EN:", server.url);
 });
