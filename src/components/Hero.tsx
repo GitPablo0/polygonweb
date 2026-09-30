@@ -47,15 +47,15 @@ export function Hero() {
             <div className="hidden h-10 w-px bg-white/60 sm:block" />
             <div className="grid flex-1 grid-cols-3 gap-4 text-left sm:gap-6">
               <div>
-                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">1:1</p>
-                <p className="text-xs text-ink-soft sm:text-sm">Comunicación directa</p>
+                <p className="font-display text-md font-semibold text-ink sm:text-2xl">1:1</p>
+                <p className="text-xs text-ink-soft sm:text-sm">Charla directa</p>
               </div>
               <div>
-                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">100%</p>
+                <p className="font-display text-md font-semibold text-ink sm:text-2xl">100%</p>
                 <p className="text-xs text-ink-soft sm:text-sm">Código a medida</p>
               </div>
               <div>
-                <p className="font-display text-xl font-semibold text-ink sm:text-2xl">24/7</p>
+                <p className="font-display text-md font-semibold text-ink sm:text-2xl">24/7</p>
                 <p className="text-xs text-ink-soft sm:text-sm">Soporte disponible</p>
               </div>
             </div>
