@@ -1,10 +1,20 @@
 import { createFileRoute } from '@tanstack/react-router'
+import { lazy, Suspense } from 'react'
+
+// 1. Componentes estáticos (se descargan en el primer pantallazo)
 import { Navbar } from '@/components/Navbar'
 import { Hero } from '@/components/Hero'
-import { Services } from '@/components/Services'
-import { Portfolio } from '@/components/Portfolio'
 import { Footer } from '@/components/Footer'
-import { WhatsAppButton } from '@/components/WspButton'      
+import { WhatsAppButton } from '@/components/WspButton'
+
+// 2. Componentes diferidos con Lazy Loading (Code Splitting)
+const Services = lazy(() =>
+  import('@/components/Services').then((m) => ({ default: m.Services })),
+)
+
+const Portfolio = lazy(() =>
+  import('@/components/Portfolio').then((m) => ({ default: m.Portfolio })),
+)
 
 export const Route = createFileRoute('/')({
   component: Home,
@@ -16,8 +26,10 @@ function Home() {
       <Navbar />
       <main>
         <Hero />
-        <Services />
-        <Portfolio />
+        <Suspense fallback={null}>
+          <Services />
+          <Portfolio />
+        </Suspense>
         <WhatsAppButton />
       </main>
       <Footer />

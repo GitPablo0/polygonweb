@@ -6,7 +6,7 @@ interface LogoProps {
 export function LogoMark({ className }: { className?: string }) {
   return (
     <img
-      src="/img/logo.png"
+      src="/img/logo.webp"
       alt="Polygon Web"
       className={className}
     />

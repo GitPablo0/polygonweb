@@ -1,11 +1,34 @@
 import { HeadContent, Scripts, createRootRoute } from '@tanstack/react-router'
-
-
 import '../styles.css'
 
-const siteName = 'Polygon Web — Desarrollo Web y Móvil Freelance'
+const siteName = 'Polygon Web | Desarrollo Web & Soluciones Digitales'
 const siteDescription =
-  'Polygon Web es un estudio de desarrollo web y móvil freelance que ofrece soluciones personalizadas para empresas y emprendedores. Nos especializamos en crear sitios web, aplicaciones móviles y plataformas digitales innovadoras y funcionales.'
+  'Estudio de desarrollo web y móvil en Argentina. Diseñamos landing pages de alta conversión, aplicaciones web y plataformas digitales a medida para empresas y emprendedores.'
+const siteUrl = 'https://polygonweb.com.ar'
+const siteImage = `${siteUrl}/og-image.png`
+
+// Esquema JSON-LD para SEO Local y Servicios Profesionales
+const structuredData = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Polygon Web',
+  url: siteUrl,
+  logo: `${siteUrl}/logo.png`,
+  image: siteImage,
+  description: siteDescription,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'José C. Paz',
+    addressRegion: 'Buenos Aires',
+    addressCountry: 'AR',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: '-34.5153',
+    longitude: '-58.7681',
+  },
+  priceRange: '$$',
+}
 
 export const Route = createRootRoute({
   head: () => ({
@@ -25,6 +48,12 @@ export const Route = createRootRoute({
         content: siteDescription,
       },
       {
+        name: 'keywords',
+        content:
+          'desarrollo web, landing page, aplicaciones web, React, soluciones digitales, argentina, polygon web',
+      },
+      // Open Graph (WhatsApp, Facebook, LinkedIn)
+      {
         property: 'og:title',
         content: siteName,
       },
@@ -37,12 +66,44 @@ export const Route = createRootRoute({
         content: 'website',
       },
       {
+        property: 'og:url',
+        content: siteUrl,
+      },
+      {
+        property: 'og:image',
+        content: siteImage,
+      },
+      {
+        property: 'og:locale',
+        content: 'es_AR',
+      },
+      // Twitter Cards
+      {
         name: 'twitter:card',
         content: 'summary_large_image',
       },
+      {
+        name: 'twitter:title',
+        content: siteName,
+      },
+      {
+        name: 'twitter:description',
+        content: siteDescription,
+      },
+      {
+        name: 'twitter:image',
+        content: siteImage,
+      },
     ],
     links: [
-      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+      {
+        rel: 'canonical',
+        href: siteUrl,
+      },
+      {
+        rel: 'preconnect',
+        href: 'https://fonts.googleapis.com',
+      },
       {
         rel: 'preconnect',
         href: 'https://fonts.gstatic.com',
@@ -50,7 +111,13 @@ export const Route = createRootRoute({
       },
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap" rel="stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap',
+      },
+    ],
+    scripts: [
+      {
+        type: 'application/ld+json',
+        children: JSON.stringify(structuredData),
       },
     ],
   }),
@@ -59,7 +126,7 @@ export const Route = createRootRoute({
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="es">
       <head>
         <HeadContent />
       </head>

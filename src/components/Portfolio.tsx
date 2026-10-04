@@ -4,6 +4,7 @@ interface Project {
   category: string
   description: string
   link: string
+  alt:string
 }
 
 const PROJECTS: Array<Project> = [
@@ -13,6 +14,7 @@ const PROJECTS: Array<Project> = [
     category: 'SaaS · Landing',
     description: 'Club de Cultura Urbana, estudio de tatuaje, barbería y cafetería en un mismo lugar.',
     link: 'https://cayoperico.com.ar',
+    alt: 'Vista previa del proyecto Cayo Perico'
   },
   {
     image: '/img/portfolio-2.png',
@@ -20,6 +22,7 @@ const PROJECTS: Array<Project> = [
     category: 'E-commerce · Tienda Nube',
     description: 'Lencería diseñada y confeccionada con amor, dedicación y atención a los detalles.',
     link: 'https://malery.com.ar',
+    alt: 'Vista previa del proyecto Malery'
   },
   {
     image: '/img/portfolio-3.png',
@@ -27,6 +30,7 @@ const PROJECTS: Array<Project> = [
     category: 'SaaS · Landing',
     description: 'Iglesia comprometida con la enseñanza de la Palabra de Dios y el crecimiento espiritual de las familias.',
     link: 'https://brown-badger-619821.hostingersite.com/',
+    alt: 'Vista previa del proyecto Familia Cristiana Eben Ezer'
   },
 ]
 
