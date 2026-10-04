@@ -100,6 +100,13 @@ export const Route = createRootRoute({
         rel: 'canonical',
         href: siteUrl,
       },
+      {
+        rel: 'preload',
+        href: '/assets/orbitron-latin-400-normal.woff2',
+        as: 'font',
+        type: 'font/woff2',
+        crossorigin: true,
+      }
     ],
     scripts: [
       {

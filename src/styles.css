@@ -2,6 +2,14 @@
 @import '@fontsource/orbitron/400.css';
 @import '@fontsource/orbitron/700.css';
 
+@font-face {
+  font-family: 'Orbitron';
+  font-style: normal;
+  font-weight: 400 900;
+  font-display: swap;
+  src: url('@fontsource/orbitron/files/orbitron-latin-variable-full-normal.woff2') format('woff2');
+}
+
 @theme {
   /* Backgrounds */
   --color-mist: #f3f5f8;
@@ -27,6 +35,7 @@
   --shadow-soft: 0 1px 2px rgba(28, 39, 51, 0.04), 0 12px 32px -12px rgba(125, 154, 179, 0.35);
   --shadow-lift: 0 2px 4px rgba(28, 39, 51, 0.05), 0 24px 48px -16px rgba(125, 154, 179, 0.45);
 }
+
 
 @layer base {
   html {
